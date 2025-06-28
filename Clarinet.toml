@@ -1,0 +1,23 @@
+[project]
+name = "sBTC-InvoX"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+cache_dir = "/home/runner/workspace/sBTC-InvoX/./.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.sBTC-InvoX]
+path = "contracts/sBTC-InvoX.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
